@@ -1,32 +1,23 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-02T12:36:10.967Z",
+  "__export_date": "2022-06-02T13:03:31.262Z",
   "__export_source": "insomnia.desktop.app:v2022.3.0",
   "resources": [
     {
-      "_id": "req_05a2b6e605344ceca2397a81bac72b85",
+      "_id": "req_617a6799e1e74935924c6d77086b8a53",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654172882336,
-      "created": 1654172825058,
+      "modified": 1654174958999,
+      "created": 1654174953672,
       "url": "{{ _.base_url }}/categories",
-      "name": "Create",
+      "name": "List",
       "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"SUV\",\n\t\"categorie\": \"Categoria de carro SUV\"\n}"
-      },
+      "method": "GET",
+      "body": {},
       "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json",
-          "id": "pair_24c1cdb4f07c43c8a3549450ecec1e18"
-        }
-      ],
+      "headers": [],
       "authentication": {},
-      "metaSortKey": -1654172825058,
+      "metaSortKey": -1654174953672,
       "isPrivate": false,
       "settingStoreCookies": true,
       "settingSendCookies": true,
@@ -57,6 +48,38 @@
       "description": "",
       "scope": "collection",
       "_type": "workspace"
+    },
+    {
+      "_id": "req_05a2b6e605344ceca2397a81bac72b85",
+      "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
+      "modified": 1654174984551,
+      "created": 1654172825058,
+      "url": "{{ _.base_url }}/categories",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"SUV\",\n\t\"description\": \"Categoria de carro SUV\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_24c1cdb4f07c43c8a3549450ecec1e18"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1654172825058,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
     },
     {
       "_id": "env_c1833327845cb2bfa2187ccbee3570bdef4c398f",
