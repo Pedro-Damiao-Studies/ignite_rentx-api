@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-02T13:03:31.262Z",
+  "__export_date": "2022-06-02T13:07:55.931Z",
   "__export_source": "insomnia.desktop.app:v2022.3.0",
   "resources": [
     {
@@ -52,7 +52,7 @@
     {
       "_id": "req_05a2b6e605344ceca2397a81bac72b85",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654174984551,
+      "modified": 1654175238613,
       "created": 1654172825058,
       "url": "{{ _.base_url }}/categories",
       "name": "Create",
