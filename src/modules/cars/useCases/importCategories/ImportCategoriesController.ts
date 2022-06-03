@@ -11,7 +11,6 @@ class ImportCategoriesController {
 
   handle(request: Request, response: Response) {
     const { file } = request;
-    console.log(file);
 
     this.importCategoriesUseCase.execute(file);
 
