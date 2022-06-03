@@ -1,0 +1,13 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RentalX API",
+    "description": "RentalX API",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Pedro Henrique Ferreira",
+      "url": "https://damiao.dev.br",
+      "email": "pedrohenriquefcd@gmail.com"
+    }
+  }
+}
