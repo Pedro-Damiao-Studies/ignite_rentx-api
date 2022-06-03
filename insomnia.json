@@ -1,9 +1,116 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-02T13:07:55.931Z",
+  "__export_date": "2022-06-03T19:44:07.254Z",
   "__export_source": "insomnia.desktop.app:v2022.3.0",
   "resources": [
+    {
+      "_id": "req_b1a5ba3f719245b5ba3de65729290ad7",
+      "parentId": "fld_362caba28a584e80b31efe0d60b1c17a",
+      "modified": 1654270443817,
+      "created": 1654203916395,
+      "url": "{{ _.base_url }}/specifications",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Câmbio Automático\",\n\t\"description\": \"Carro com câmbio Automático\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e4e209a23a60459686f82deed7ce6b23"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1654203916395,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_362caba28a584e80b31efe0d60b1c17a",
+      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "modified": 1654203909108,
+      "created": 1654203909108,
+      "name": "Specifications",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654203909108,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "parentId": null,
+      "modified": 1654172811074,
+      "created": 1654172811074,
+      "name": "Ignite - Chapter 2 - Iniciando a API",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_c4a01fb25941428aaf2f141d077c758b",
+      "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
+      "modified": 1654277399372,
+      "created": 1654277294900,
+      "url": "{{ _.base_url }}/categories/import",
+      "name": "Import",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_18880f61f4cb45969769fa7bdd2cd14a",
+            "name": "file",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_a42fbf59e8b24164afec16176dd2fadd"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1654277294900,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f08f2191949f4883874090f40b9b7ea1",
+      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "modified": 1654172818757,
+      "created": 1654172818757,
+      "name": "Categories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654172818757,
+      "_type": "request_group"
+    },
     {
       "_id": "req_617a6799e1e74935924c6d77086b8a53",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
@@ -28,31 +135,9 @@
       "_type": "request"
     },
     {
-      "_id": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "modified": 1654172818757,
-      "created": 1654172818757,
-      "name": "Categories",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1654172818757,
-      "_type": "request_group"
-    },
-    {
-      "_id": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "parentId": null,
-      "modified": 1654172811074,
-      "created": 1654172811074,
-      "name": "Ignite - Chapter 2 - Iniciando a API",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
-    },
-    {
       "_id": "req_05a2b6e605344ceca2397a81bac72b85",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654175238613,
+      "modified": 1654270439343,
       "created": 1654172825058,
       "url": "{{ _.base_url }}/categories",
       "name": "Create",
