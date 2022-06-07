@@ -9,7 +9,10 @@ interface IRequest {
 
 @injectable()
 class CreateCategoryUseCase {
-  constructor(@inject('CategoriesRepository') private categoriesRepository: ICategoriesRepository) {}
+  constructor(
+    @inject('CategoriesRepository')
+    private categoriesRepository: ICategoriesRepository
+  ) {}
 
   async execute({ name, description }: IRequest): Promise<void> {
     const categoryAlreadyExists = await this.categoriesRepository.findByName(name);
