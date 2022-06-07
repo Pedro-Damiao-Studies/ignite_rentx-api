@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "RentalX API",
-    "description": "RentalX API",
+    "title": "RentX API",
+    "description": "RentX API",
     "version": "1.0.0",
     "contact": {
       "name": "Pedro Henrique Ferreira",
@@ -62,7 +62,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type":"object",
+                    "type": "object",
                     "properties": {
                       "id": {
                         "type": "string",
@@ -83,6 +83,73 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/categories/import": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Import categories",
+        "description": "Import categories from a CSV file",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "response":{
+          "201": {
+            "description": "Categories imported"
+          }
+        }
+      }
+    },
+    "/specifications": {
+      "post": {
+        "tags": [
+          "Specification"
+        ],
+        "summary": "Create a specification",
+        "description": "Create a new specification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Door Count",
+                  "description": "Number of doors"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Specification created"
+          },
+          "500": {
+            "description": "Specification already exists"
           }
         }
       }
