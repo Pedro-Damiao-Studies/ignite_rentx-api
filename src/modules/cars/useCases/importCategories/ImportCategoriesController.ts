@@ -9,10 +9,10 @@ class ImportCategoriesController {
     this.importCategoriesUseCase = importCategoriesUseCase;
   }
 
-  handle(request: Request, response: Response) {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { file } = request;
 
-    this.importCategoriesUseCase.execute(file);
+    await this.importCategoriesUseCase.execute(file);
 
     return response.send();
   }
