@@ -1,13 +1,67 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-03T19:44:07.254Z",
+  "__export_date": "2022-06-08T18:11:27.326Z",
   "__export_source": "insomnia.desktop.app:v2022.3.0",
   "resources": [
     {
+      "_id": "req_6758fdf0213243b892360303fdbd03fc",
+      "parentId": "fld_b50388bf1b69429abd3b4f1fd6523160",
+      "modified": 1654711864187,
+      "created": 1654711095746,
+      "url": "{{ _.base_url }}/users",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Pedro Henrique\", \n \t\"email\": \"pedro@damiao.dev.br\", \n\t\"password\": \"1233444\", \n \t\"driver_license\": \"111111111111\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d557c366046749949127bb12f42512fb"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1654711095746,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b50388bf1b69429abd3b4f1fd6523160",
+      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "modified": 1654711090269,
+      "created": 1654711090269,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654711090269,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "parentId": null,
+      "modified": 1654172811074,
+      "created": 1654172811074,
+      "name": "Ignite - Chapter 2 - Iniciando a API",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
       "_id": "req_b1a5ba3f719245b5ba3de65729290ad7",
       "parentId": "fld_362caba28a584e80b31efe0d60b1c17a",
-      "modified": 1654270443817,
+      "modified": 1654634699058,
       "created": 1654203916395,
       "url": "{{ _.base_url }}/specifications",
       "name": "Create",
@@ -49,16 +103,6 @@
       "_type": "request_group"
     },
     {
-      "_id": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "parentId": null,
-      "modified": 1654172811074,
-      "created": 1654172811074,
-      "name": "Ignite - Chapter 2 - Iniciando a API",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
-    },
-    {
       "_id": "req_c4a01fb25941428aaf2f141d077c758b",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
       "modified": 1654277399372,
@@ -76,7 +120,7 @@
             "value": "",
             "description": "",
             "type": "file",
-            "fileName": "C:"
+            "fileName": "C:\\Users\\PedroHenrique\\Documents\\GitHub\\_personal\\_Studying\\Ignite_Chapter-2-Iniciando-a-API\\assets\\categories.csv"
           }
         ]
       },
@@ -137,7 +181,7 @@
     {
       "_id": "req_05a2b6e605344ceca2397a81bac72b85",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654270439343,
+      "modified": 1654633814133,
       "created": 1654172825058,
       "url": "{{ _.base_url }}/categories",
       "name": "Create",
@@ -145,7 +189,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"SUV\",\n\t\"description\": \"Categoria de carro SUV\"\n}"
+        "text": "{\n\t\"name\": \"Sedan\",\n\t\"description\": \"Categoria de carro Sedan\"\n}"
       },
       "parameters": [],
       "headers": [
