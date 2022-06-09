@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-08T21:00:13.374Z",
+  "__export_date": "2022-06-09T14:36:41.613Z",
   "__export_source": "insomnia.desktop.app:v2022.3.0",
   "resources": [
     {
       "_id": "req_0e5b5fa197e446eba278daca8d3fd00c",
       "parentId": "fld_3f1f45453daa4a5ab7366c392831edba",
-      "modified": 1654721495243,
+      "modified": 1654782255259,
       "created": 1654719266142,
       "url": "{{ _.base_url }}/sessions",
       "name": "Authenticate",
@@ -25,7 +25,11 @@
           "id": "pair_498237e0bf9f430886137d544b800d34"
         }
       ],
-      "authentication": {},
+      "authentication": {
+        "type": "bearer",
+        "disabled": false,
+        "token": ""
+      },
       "metaSortKey": -1654719266142,
       "isPrivate": false,
       "settingStoreCookies": true,
@@ -57,6 +61,62 @@
       "description": "",
       "scope": "collection",
       "_type": "workspace"
+    },
+    {
+      "_id": "req_46ddd702b9374539a085af86881a1da2",
+      "parentId": "fld_b50388bf1b69429abd3b4f1fd6523160",
+      "modified": 1654782544507,
+      "created": 1654782080073,
+      "url": "{{ _.base_url }}/users/avatar",
+      "name": "Update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_2551c091f7d7434f82141a86de18d0c2",
+            "name": "avatar",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:\\"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_46fadef79793423ea37a5c2c6b30d8b5"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1654782080073,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b50388bf1b69429abd3b4f1fd6523160",
+      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "modified": 1654711090269,
+      "created": 1654711090269,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654711090269,
+      "_type": "request_group"
     },
     {
       "_id": "req_6758fdf0213243b892360303fdbd03fc",
@@ -91,21 +151,9 @@
       "_type": "request"
     },
     {
-      "_id": "fld_b50388bf1b69429abd3b4f1fd6523160",
-      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "modified": 1654711090269,
-      "created": 1654711090269,
-      "name": "Users",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1654711090269,
-      "_type": "request_group"
-    },
-    {
       "_id": "req_b1a5ba3f719245b5ba3de65729290ad7",
       "parentId": "fld_362caba28a584e80b31efe0d60b1c17a",
-      "modified": 1654721957271,
+      "modified": 1654781646083,
       "created": 1654203916395,
       "url": "{{ _.base_url }}/specifications",
       "name": "Create",
@@ -260,15 +308,17 @@
     {
       "_id": "env_c1833327845cb2bfa2187ccbee3570bdef4c398f",
       "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "modified": 1654172841574,
+      "modified": 1654782226348,
       "created": 1654172811081,
       "name": "Base Environment",
       "data": {
-        "base_url": "http://localhost:3333"
+        "base_url": "http://localhost:3333",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTQ3ODIyMTEsImV4cCI6MTY1NDg2ODYxMSwic3ViIjoiZDUyMDAwMDgtNDY2OC00OGUxLTlmODMtZTM5NTc5ZjdhMjdhIn0.xaRdMQfX7uMEiz3RwtGFbAmHpcMEU-Cp0RK-xWZAdlg"
       },
       "dataPropertyOrder": {
         "&": [
-          "base_url"
+          "base_url",
+          "token"
         ]
       },
       "color": null,

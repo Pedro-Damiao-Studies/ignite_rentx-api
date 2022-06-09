@@ -8,7 +8,7 @@ interface IPayload {
   sub: string;
 }
 
-function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
+async function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
@@ -21,11 +21,15 @@ function ensureAuthenticated(request: Request, response: Response, next: NextFun
     const { sub: userId } = verify(token, 'my-secret-key') as IPayload;
 
     const usersRepository = new UsersRepository();
-    const user = usersRepository.findById(userId);
+    const user = await usersRepository.findById(userId);
 
     if (!user) {
       throw new AppError('User not found', 401);
     }
+
+    request.user = {
+      id: user.id,
+    };
   } catch (error) {
     throw new AppError(error?.message, 401);
   }
