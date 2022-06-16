@@ -3,7 +3,7 @@ import { Express } from 'express';
 import fs from 'fs';
 import { inject, injectable } from 'tsyringe';
 
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import { ICategoriesRepository } from '@modules/cars/repositories/ICategoriesRepository';
 
 interface IImportedCategory {
   name: string;
