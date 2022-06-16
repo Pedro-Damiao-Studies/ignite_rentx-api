@@ -6,14 +6,11 @@
     "module": "commonjs",
     "baseUrl": "./src",
     "paths": {
-      "@middlewares/*":  ["middlewares/*"],
-      "@database/*":     ["database/*"],
-      "@modules/*":      ["modules/*"],
-      "@config/*":       ["config/*"],
-      "@shared/*":       ["shared/*"],
-      "@routes/*":       ["routes/*"],
-      "@errors/*":       ["errors/*"],
-      "@utils/*":        ["utils/*"]
+      "@database/*": ["database/*"],
+      "@modules/*":  ["modules/*"],
+      "@config/*":   ["config/*"],
+      "@shared/*":   ["shared/*"],
+      "@utils/*":    ["utils/*"]
     },
     "resolveJsonModule": true,
     "outDir": "./dist",

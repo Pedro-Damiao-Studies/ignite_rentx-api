@@ -1,6 +1,6 @@
-import { AppError } from '@errors/AppError';
 import { CategoriesRepositoryInMemory } from '@modules/cars/repositories/in-memory/CategoriesRepositoryInMemory';
 import { CreateCategoryUseCase } from '@modules/cars/useCases/createCategory/CreateCategoryUseCase';
+import { AppError } from '@shared/errors/AppError';
 
 let createCategoryUseCase: CreateCategoryUseCase;
 let categoriesRepositoryInMemory: CategoriesRepositoryInMemory;
@@ -23,7 +23,6 @@ describe('Create category', () => {
     });
 
     const createdCategory = await categoriesRepositoryInMemory.findByName(category.name);
-    console.log(createdCategory);
 
     expect(createdCategory).toHaveProperty('id');
   });
