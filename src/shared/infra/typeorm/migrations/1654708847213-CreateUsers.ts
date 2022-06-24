@@ -9,6 +9,7 @@ export class CreteUsers1654708847213 implements MigrationInterface {
           {
             name: 'id',
             type: 'uuid',
+            isPrimary: true,
           },
           {
             name: 'name',
