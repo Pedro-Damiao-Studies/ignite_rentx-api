@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2022-06-09T14:36:41.613Z",
-  "__export_source": "insomnia.desktop.app:v2022.3.0",
+  "__export_date": "2022-06-29T22:55:32.136Z",
+  "__export_source": "insomnia.desktop.app:v2022.4.2",
   "resources": [
     {
       "_id": "req_0e5b5fa197e446eba278daca8d3fd00c",
       "parentId": "fld_3f1f45453daa4a5ab7366c392831edba",
-      "modified": 1654782255259,
+      "modified": 1656536312436,
       "created": 1654719266142,
       "url": "{{ _.base_url }}/sessions",
       "name": "Authenticate",
@@ -15,7 +15,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"email\": \"pedro@damiao.dev.br\",\n\t\"password\": \"1233444\"\n}"
+        "text": "{\n\t\"email\": \"admin@rentx.com\",\n\t\"password\": \"admin\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -23,6 +23,12 @@
           "name": "Content-Type",
           "value": "application/json",
           "id": "pair_498237e0bf9f430886137d544b800d34"
+        },
+        {
+          "id": "pair_c2fbeb44cdaa4fdb991826e43ada3914",
+          "name": "",
+          "value": "",
+          "description": ""
         }
       ],
       "authentication": {
@@ -65,7 +71,7 @@
     {
       "_id": "req_46ddd702b9374539a085af86881a1da2",
       "parentId": "fld_b50388bf1b69429abd3b4f1fd6523160",
-      "modified": 1654782544507,
+      "modified": 1656419834535,
       "created": 1654782080073,
       "url": "{{ _.base_url }}/users/avatar",
       "name": "Update",
@@ -80,7 +86,7 @@
             "value": "",
             "description": "",
             "type": "file",
-            "fileName": "C:\\"
+            "fileName": "C:"
           }
         ]
       },
@@ -121,7 +127,7 @@
     {
       "_id": "req_6758fdf0213243b892360303fdbd03fc",
       "parentId": "fld_b50388bf1b69429abd3b4f1fd6523160",
-      "modified": 1654711864187,
+      "modified": 1656436868648,
       "created": 1654711095746,
       "url": "{{ _.base_url }}/users",
       "name": "Create",
@@ -153,7 +159,7 @@
     {
       "_id": "req_b1a5ba3f719245b5ba3de65729290ad7",
       "parentId": "fld_362caba28a584e80b31efe0d60b1c17a",
-      "modified": 1654781646083,
+      "modified": 1656536744644,
       "created": 1654203916395,
       "url": "{{ _.base_url }}/specifications",
       "name": "Create",
@@ -161,7 +167,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"Câmbio Automático\",\n\t\"description\": \"Carro com câmbio Automático\"\n}"
+        "text": "{\n\t\"name\": \"Câmbio Manual\",\n\t\"description\": \"Carro com câmbio Manual\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -173,7 +179,7 @@
       ],
       "authentication": {
         "type": "bearer",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTQ3MjE1MDgsImV4cCI6MTY1NDgwNzkwOCwic3ViIjoiZDUyMDAwMDgtNDY2OC00OGUxLTlmODMtZTM5NTc5ZjdhMjdhIn0.S9sVUNFVr0MP6XyEMbjF0vGJtTAYi4JFwUTrrhCMWh"
+        "token": "{{ _.token_admin }}"
       },
       "metaSortKey": -1654203916395,
       "isPrivate": false,
@@ -198,9 +204,179 @@
       "_type": "request_group"
     },
     {
+      "_id": "req_5afb9a7640704b6bb7e6dbdd87b1a9e3",
+      "parentId": "fld_1382438e7ed74eb3b9d9efbd66be12a9",
+      "modified": 1656543317060,
+      "created": 1656543072985,
+      "url": "{{ _.base_url }}/cars/images/588fb59d-cbe1-4d45-b72f-2d6c79d33b77",
+      "name": "Images",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_ca34036fb6a64df684c21cae9ace6b0b",
+            "name": "images",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C:"
+          },
+          {
+            "id": "pair_62eb6960538f42359ef4e3c91fa2f8a6",
+            "name": "images",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "C"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_0fc7e8e074f047cbae4fb92d4042bfc3"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token_admin }}"
+      },
+      "metaSortKey": -1656543072985,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1382438e7ed74eb3b9d9efbd66be12a9",
+      "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
+      "modified": 1656184552117,
+      "created": 1656184546335,
+      "name": "Cars",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1654188363932.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9930c6d899a64dd9a19aa8dd6b5f4f11",
+      "parentId": "fld_1382438e7ed74eb3b9d9efbd66be12a9",
+      "modified": 1656536766435,
+      "created": 1656536196180,
+      "url": "{{ _.base_url }}/cars/588fb59d-cbe1-4d45-b72f-2d6c79d33b77/specifications",
+      "name": "Specifications",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"specifications_id\": [\n\t\t\"38da9f1d-6f3c-4aa2-bd7b-e02eb1f47f09\",\n\t\t\"7fe35bff-85b8-4891-a942-7921d82ff25f\"\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_0742dce331d74c26b21468ecafdcaf66"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token_admin }}"
+      },
+      "metaSortKey": -1656536196180,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0a52265d0c624197b9668ae0b97cb84d",
+      "parentId": "fld_1382438e7ed74eb3b9d9efbd66be12a9",
+      "modified": 1656437204112,
+      "created": 1656436806976,
+      "url": "{{ _.base_url }}/cars/available",
+      "name": "Available",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_7f5f7fa230c64a01979d2054bda64baf",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1656436806976,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0c24f905bf3147339a4d6e63a5b84e0c",
+      "parentId": "fld_1382438e7ed74eb3b9d9efbd66be12a9",
+      "modified": 1656437013452,
+      "created": 1656184555180,
+      "url": "{{ _.base_url }}/cars",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"A8\", \n\t\"description\": \"Carro Sedan\", \n\t\"daily_rate\": \"190\", \n\t\"license_plate\": \"BBB-1B11\", \n\t\"fine_amount\": \"20\", \n\t\"brand\": \"Audi\", \n\t\"category_id\": \"29b3dab2-c820-400a-bf11-e2d2a113f39a\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5cee43a2235745c0a34a5c9d8781cd53"
+        },
+        {
+          "id": "pair_964e9a10b1994e23bb1e69b135d73cc4",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1656184555180,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "req_c4a01fb25941428aaf2f141d077c758b",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654277399372,
+      "modified": 1656436841862,
       "created": 1654277294900,
       "url": "{{ _.base_url }}/categories/import",
       "name": "Import",
@@ -215,7 +391,7 @@
             "value": "",
             "description": "",
             "type": "file",
-            "fileName": "C:\\Users\\PedroHenrique\\Documents\\GitHub\\_personal\\_Studying\\Ignite_Chapter-2-Iniciando-a-API\\assets\\categories.csv"
+            "fileName": "C:"
           }
         ]
       },
@@ -227,7 +403,10 @@
           "id": "pair_a42fbf59e8b24164afec16176dd2fadd"
         }
       ],
-      "authentication": {},
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
       "metaSortKey": -1654277294900,
       "isPrivate": false,
       "settingStoreCookies": true,
@@ -276,7 +455,7 @@
     {
       "_id": "req_05a2b6e605344ceca2397a81bac72b85",
       "parentId": "fld_f08f2191949f4883874090f40b9b7ea1",
-      "modified": 1654633814133,
+      "modified": 1656184660836,
       "created": 1654172825058,
       "url": "{{ _.base_url }}/categories",
       "name": "Create",
@@ -308,17 +487,19 @@
     {
       "_id": "env_c1833327845cb2bfa2187ccbee3570bdef4c398f",
       "parentId": "wrk_8ac35e2e81c8467ea3eff6d71912aa8d",
-      "modified": 1654782226348,
+      "modified": 1656536297238,
       "created": 1654172811081,
       "name": "Base Environment",
       "data": {
         "base_url": "http://localhost:3333",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTQ3ODIyMTEsImV4cCI6MTY1NDg2ODYxMSwic3ViIjoiZDUyMDAwMDgtNDY2OC00OGUxLTlmODMtZTM5NTc5ZjdhMjdhIn0.xaRdMQfX7uMEiz3RwtGFbAmHpcMEU-Cp0RK-xWZAdlg"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY0MTk5NzksImV4cCI6MTY1NjUwNjM3OSwic3ViIjoiN2ViOWI4NzMtNTE1MS00NmZiLTg3YTgtNWI1YWRlMmM1MjA5In0.TWNuPnapn0rntMGdueKISO4vwB7s7HpQjByXpb0sHFU",
+        "token_admin": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1MzYyODAsImV4cCI6MTY1NjYyMjY4MCwic3ViIjoiN2ViOWI4NzMtNTE1MS00NmZiLTg3YTgtNWI1YWRlMmM1MjA5In0.LwVkgT4x9pEFpGg-Op1YnkBSyh2cm4rkDMSBj043u5o"
       },
       "dataPropertyOrder": {
         "&": [
           "base_url",
-          "token"
+          "token",
+          "token_admin"
         ]
       },
       "color": null,
