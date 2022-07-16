@@ -1,7 +1,7 @@
 interface ICreateRentalDTO {
   user_id: string;
   car_id: string;
-  expected_return_date: Date;
+  expected_end_date: Date;
 }
 
 export { ICreateRentalDTO };
