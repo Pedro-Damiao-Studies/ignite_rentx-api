@@ -6,6 +6,8 @@ import swaggerUi from 'swagger-ui-express';
 import 'express-async-errors';
 import 'reflect-metadata';
 
+import 'dotenv/config';
+
 import '@shared/container';
 
 import { AppError } from '@shared/errors/AppError';
