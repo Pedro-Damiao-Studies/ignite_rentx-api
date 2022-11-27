@@ -2,10 +2,12 @@ import { S3 } from 'aws-sdk';
 import { readFile, unlink } from 'fs/promises';
 import mime from 'mime';
 import { resolve } from 'path';
+import { injectable } from 'tsyringe';
 
 import upload from '@config/upload';
 import { IStorageProvider } from '@shared/container/providers/StorageProvider/IStorageProvider';
 
+@injectable()
 class S3StorageProvider implements IStorageProvider {
   private client: S3;
 
